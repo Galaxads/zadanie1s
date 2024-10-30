@@ -25,12 +25,12 @@
 			<TextBox x:Name="Telefon"   Margin="0,210,0,0"  Width="180" HorizontalAlignment="Left"  Watermark="Telefon"></TextBox>
 		</StackPanel>
 
-		<ListBox x:Name="TagList" Width="150" Height="300" Margin="500,0,0,500">
+		<ListBox x:Name="TagList" Width="150" Height="300" Margin="500,0,0,500" ItemsSource="{Binding Tagsss}">
 			<ListBox.ItemTemplate>
 				<DataTemplate>
 					<Grid>
 						<StackPanel>
-							<TextBlock  Text="{Binding Tag}"></TextBlock>
+							<TextBlock  Background="{Binding Color}"  Text="{Binding Name}"></TextBlock>
 						</StackPanel>
 					</Grid>
 				</DataTemplate>
@@ -81,10 +81,10 @@
 					Margin="7"/>
 		</StackPanel>
 		<StackPanel>
-			<Button Margin="220,600,0,0">Удалить</Button>
+			<Button Margin="220,600,0,0" Click="Button_Click_2">Удалить</Button>
 		</StackPanel>
 		<StackPanel>
-			<Button Margin="570,350,0,0" Click="Button_Click_2" >Редактировать теги</Button>
+			<Button Margin="570,350,0,0" Click="Button_Click_3"  >Редактировать теги</Button>
 		</StackPanel>
 		</Grid>
 </Window>

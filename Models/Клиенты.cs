@@ -27,7 +27,7 @@ public partial class Клиенты
 
     public int? ColvoVisit { get; set; }
 
-    public int? Tag { get; set; }
+    public int? Tagpers { get; set; }
 
     public string? Photo { get; set; }
 
@@ -43,7 +43,7 @@ public partial class Клиенты
 
     public virtual ICollection<Posehenium> Posehenia { get; set; } = new List<Posehenium>();
 
-    public virtual ListTag? TagNavigation { get; set; }
+    public virtual ListTag? TagpersNavigation { get; set; }
 
     public virtual Posehenium? VisitNavigation { get; set; }
 }

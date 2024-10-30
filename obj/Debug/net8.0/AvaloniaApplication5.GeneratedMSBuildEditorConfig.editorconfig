@@ -28,8 +28,14 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 [C:/Users/Maxx/source/repos/AvaloniaApplication5/AvaloniaApplication5/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Maxx/source/repos/AvaloniaApplication5/AvaloniaApplication5/HistoryAndFile.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Maxx/source/repos/AvaloniaApplication5/AvaloniaApplication5/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/Maxx/source/repos/AvaloniaApplication5/AvaloniaApplication5/Redactor.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Maxx/source/repos/AvaloniaApplication5/AvaloniaApplication5/RedactTag.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

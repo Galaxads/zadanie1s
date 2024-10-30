@@ -100,7 +100,7 @@ public partial class DefaultDbContext : DbContext
 
             entity.HasOne(d => d.IdTagNavigation).WithMany(p => p.ListTags)
                 .HasForeignKey(d => d.IdTag)
-                .HasConstraintName("ddd");
+                .HasConstraintName("list_tag_tags_fk");
         });
 
         modelBuilder.Entity<Posehenium>(entity =>
@@ -128,7 +128,7 @@ public partial class DefaultDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("tag_pk");
 
-            entity.ToTable("tag");
+            entity.ToTable("tags");
 
             entity.Property(e => e.Id)
                 .ValueGeneratedNever()
@@ -155,7 +155,7 @@ public partial class DefaultDbContext : DbContext
 
             entity.HasIndex(e => e.Visit, "клиенты_unique").IsUnique();
 
-            entity.HasIndex(e => e.Tag, "клиенты_unique_1").IsUnique();
+            entity.HasIndex(e => e.Tagpers, "клиенты_unique_1").IsUnique();
 
             entity.HasIndex(e => e.Files, "клиенты_unique_2").IsUnique();
 
@@ -185,7 +185,7 @@ public partial class DefaultDbContext : DbContext
             entity.Property(e => e.Surname)
                 .HasColumnType("character varying")
                 .HasColumnName("surname");
-            entity.Property(e => e.Tag).HasColumnName("tag");
+            entity.Property(e => e.Tagpers).HasColumnName("tagpers");
             entity.Property(e => e.Visit).HasColumnName("visit");
 
             entity.HasOne(d => d.Files1).WithOne(p => p.Клиенты)
@@ -197,8 +197,8 @@ public partial class DefaultDbContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("клиенты_gender_fk");
 
-            entity.HasOne(d => d.TagNavigation).WithOne(p => p.Клиенты)
-                .HasForeignKey<Клиенты>(d => d.Tag)
+            entity.HasOne(d => d.TagpersNavigation).WithOne(p => p.Клиенты)
+                .HasForeignKey<Клиенты>(d => d.Tagpers)
                 .HasConstraintName("клиенты_list_tag_fk");
 
             entity.HasOne(d => d.VisitNavigation).WithOne(p => p.Клиенты)

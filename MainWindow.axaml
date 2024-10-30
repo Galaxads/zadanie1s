@@ -120,13 +120,27 @@
 							<TextBlock Margin="1500,0,0,0" Text="{Binding ColvoVisit}"></TextBlock>
 						</StackPanel>
 						<StackPanel>
-							<Button Margin="500,70,0,0" Content="История посещения "></Button>
+							<Button Margin="500,70,0,0" Name="History" Tag="{Binding Id}" Click="Button_Click_3" Content="История посещения "></Button>
 						</StackPanel>
-					
-					</Grid>
-				</DataTemplate>
-			</ListBox.ItemTemplate>
-		</ListBox>
+						<StackPanel>
+							
+							<ListBox ItemsSource="{Binding Tagsss}" Width="180" Height="80"  Margin="0,30,0,0">
+								<ListBox.ItemTemplate>
+									<DataTemplate> 
+										<Grid>
+											<StackPanel >
+												<TextBlock  Background="{Binding Color}"  Text="{Binding Name}"></TextBlock>
+											</StackPanel>
+										</Grid>
+									</DataTemplate>
+								</ListBox.ItemTemplate>
+							</ListBox>
+						</StackPanel>
+						</Grid>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+				
 		<StackPanel>
 			<TextBlock Margin="300,720,0,0" HorizontalAlignment="Center" Width="400" x:Name="ColvoText">cvddf</TextBlock>
 		</StackPanel>
